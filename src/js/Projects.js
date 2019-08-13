@@ -55,16 +55,16 @@ class ProjectCard extends React.Component {
     return <img key={key} src={src} alt={alt} title={alt} className="icon"/>
   }
 
-  renderIconButton(key, image) {
-    return <IconButton key={key}>{image}</IconButton>
+  renderIconButton(key, image, link) {
+    return <IconButton key={key} target="_blank" href={link}>{image}</IconButton>
   }
 
   createIconButtons() {
     if(!this.props.iconUrls)
       return
     const buttons = [];
-    for (let [key, iconSrc] of this.props.iconUrls.entries()){
-      buttons.push(this.renderIconButton(key, this.renderImage(key, iconSrc)));
+    for (let [key, iconInfo] of this.props.iconUrls.entries()){
+      buttons.push(this.renderIconButton(key, this.renderImage(key, iconInfo[0]), iconInfo[1]));
     }
     return buttons;
   }
@@ -191,7 +191,7 @@ function Projects() {
             [gcloudLogo, "Google Cloud"],
           ]}
           iconUrls={[
-            githubLogo
+            [githubLogo, "https://github.com/itruong/ivantruong"]
           ]}
           body={itText}
         />
@@ -227,7 +227,7 @@ function Projects() {
             [arduinoLogo, "Arduino"],
           ]}
           iconUrls={[
-            githubLogo
+            [githubLogo, "https://github.com/itruong/elevator_pid_control"]
           ]}
         />
       </Grid>

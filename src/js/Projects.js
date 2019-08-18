@@ -27,7 +27,7 @@ import jsLogo from "../img/js-logo.png";
 import reactLogo from "../img/react-logo.png";
 import muiLogo from "../img/mui-logo.png";
 import arduinoLogo from "../img/arduino-logo.png";
-import gcloudLogo from "../img/gcloud-logo.png";
+import firebaseLogo from "../img/firebase-logo.png";
 import cppLogo from "../img/cpp-logo.png";
 import dlibLogo from "../img/dlib-logo.png";
 import d3Logo from "../img/d3-logo.svg";
@@ -146,7 +146,7 @@ function Projects() {
     This static website describes my professional background. I
     took this as an opportunity to explore the front-end libraries React.js and
     Material-UI. In addition, this allowed me to get accustomed with some of the
-    features offered by Google Cloud Platform.
+    features offered by Google Cloud Platform and Firebase.
   `
 
   const manappText = `
@@ -188,7 +188,7 @@ function Projects() {
             [jsLogo, "JavaScript"],
             [reactLogo, "React.js"],
             [muiLogo, "Material-UI"],
-            [gcloudLogo, "Google Cloud"],
+            [firebaseLogo, "Firebase"],
           ]}
           iconUrls={[
             [githubLogo, "https://github.com/itruong/ivantruong"]

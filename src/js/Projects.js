@@ -157,7 +157,7 @@ function Projects() {
   `
 
   const faceRecText = `
-    As our senior design project, my team designed and implemented a prototype
+    For our senior design project, my team designed and implemented a prototype
     door lock which consisted of a Raspberry Pi powering a servo and gear-train. 
     I was responsible for the electrical and software design, which handled the 
     facial recognition and UI logic. The dlib C++ library was used in conjunction

@@ -176,7 +176,7 @@ class HeaderAppBarCondensed extends React.Component {
                   if(Boolean(href)){
                     setTimeout(() => {
                       scrollTo(href);
-                    }, 10);
+                    }, 0);
                   }
                 }}
               />

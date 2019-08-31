@@ -19,7 +19,7 @@ import analogicLogo from "../img/analogic-logo-small.jpeg";
 import pidMedia from "../img/pid-media.png";
 import manufacturingappMedia from "../img/manufacturingapp.png";
 import rpiLogo from "../img/raspberry-pi-logo.jpg";
-import photo from "../img/ivantruong.png";
+import photo from "../img/ivantruong_2.jpg";
 import githubLogo from "../img/github-logo.svg";
 import pythonLogo from "../img/python-logo.svg";
 import djangoLogo from "../img/django-logo.svg";

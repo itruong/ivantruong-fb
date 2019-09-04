@@ -215,8 +215,6 @@ class HeaderMenu extends React.Component {
         <div
           className={classes.list}
           role="presentation"
-          //onClick={() => this.props.onClick()}
-          //onKeyDown={() => this.props.onClick()}
         >
           <List>
             {['Home', 'About', 'Projects', 'Contact'].map((text, index) => (
@@ -227,7 +225,6 @@ class HeaderMenu extends React.Component {
                 onClick={() => this.props.onClick(''.concat('#', text.toLowerCase()))}
               >
                 <ListItemText 
-                  //className={classes.text}
                   disableTypography
                   primary={
                     <Typography 

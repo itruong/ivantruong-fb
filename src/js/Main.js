@@ -301,9 +301,7 @@ function Feed() {
 
   return (
     <>
-      <div>
-        <Home/>
-      </div>
+      <Home/>
       <div className={classes.root} id="about">
         <Container maxWidth="md">
           <About/>

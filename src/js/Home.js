@@ -3,18 +3,14 @@ import "../css/Home.css";
 
 function BackgroundImage(props) {
   const styles = {
-    "overflow": "hidden",
+    //"overflow": "hidden",
     "marginTop": `${props.top}px`,
   }
   return (
     <div
-      id="home"
+      className="photo"
       style={styles}
-    >
-      <div
-        className="photo"
-      />
-    </div>
+    />
   )
 }
 

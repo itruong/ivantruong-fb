@@ -158,11 +158,10 @@ function Projects(props) {
         [githubLogo, "https://github.com/itruong/ivantruong"]
       ],
       body: `
-        We designed a miniature pulley-driven elevator controlled
-        by a PID controller implemented using Arduino UNO. This controller took 
-        platform height measurements as input from an ultrasonic sensor and adjusted 
-        the duty cycle voltage output to the motor controller based on the error 
-        from the desired height.
+        This static website describes my professional background. I
+        took this as an opportunity to explore the front-end libraries, React and
+        Material-UI. In addition, this allowed me to get accustomed with some of the
+        features offered by Google Cloud Platform and Firebase.
       `,
     },
     {
@@ -181,10 +180,10 @@ function Projects(props) {
         [dockerLogo, "Docker"],
       ],
       body: `
-        This static website describes my professional background. I
-        took this as an opportunity to explore the front-end libraries React.js and
-        Material-UI. In addition, this allowed me to get accustomed with some of the
-        features offered by Google Cloud Platform and Firebase.
+        I created this web application to track and report manufacturing metrics such as 
+        labor efficiency and takt time for internal use at Analogic Corporation.
+        Data visualizations were initially rendered in D3.js and eventually moved
+        to Microsoft Power BI.
       `,
     },
     {
@@ -200,10 +199,11 @@ function Projects(props) {
         [githubLogo, "https://github.com/itruong/elevator_pid_control"]
       ],
       body: `
-        I created this web application to track and report manufacturing metrics such as 
-        labor efficiency and takt time for internal use at Analogic Corporation.
-        Data visualizations were initially rendered in D3.js and eventually moved
-        to Microsoft Power BI.
+        We designed a miniature pulley-driven elevator controlled
+        by a PID controller implemented using Arduino UNO. This controller took 
+        platform height measurements as input from an ultrasonic sensor and adjusted 
+        the duty cycle voltage output to the motor controller based on the error 
+        from the desired height.
       `,
     },
     {

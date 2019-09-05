@@ -107,30 +107,9 @@ function HeaderButton(props) {
 }
 
 class HeaderAppBar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: 0,
-    };
-  }
-
-  componentDidMount() {
-    this.updateWindowDimensions();
-    window.addEventListener('resize', this.updateWindowDimensions.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
-  }
-
-  updateWindowDimensions() {
-    this.setState({
-      width: window.innerWidth,
-    });
-  }
 
   render() {
-    if (this.state.width < 600)
+    if (this.props.windowWidth < 600)
       return <HeaderAppBarCondensed/>
     return <HeaderAppBarWide/>
   }
@@ -293,21 +272,23 @@ HeaderAppBarWide.propTypes = {
 
 HeaderAppBarWide = withStyles(appBarStyles)(HeaderAppBarWide)
 
-function Feed() {
+function Feed(props) {
   const classes = containerStyles();
 
   return (
     <>
-      <Home/>
+      <div className={classes.root} id="home">
+        <Home/>
+      </div>
       <div className={classes.root} id="about">
         <Container maxWidth="md">
           <About/>
         </Container>
       </div>
       <div className={classes.root} id="projects">
-        <Container maxWidth="md">
-          <Projects/>
-        </Container>
+        <Projects
+          windowWidth={props.windowWidth}
+        />
       </div>
       <div className={classes.root} id="contact">
         <Container maxWidth="md">
@@ -320,12 +301,38 @@ function Feed() {
 
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      width: 0,
+    };
+  }
+
+  componentDidMount() {
+    this.updateWindowDimensions();
+    window.addEventListener('resize', this.updateWindowDimensions.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateWindowDimensions.bind(this));
+  }
+
+  updateWindowDimensions() {
+    this.setState({
+      width: window.innerWidth,
+    });
+  }
+
   render() {
     return (
       <>
         <CssBaseline/>
-        <HeaderAppBar/>
-        <Feed/>
+        <HeaderAppBar
+          windowWidth={this.state.width}
+        />
+        <Feed
+          windowWidth={this.state.width}
+        />
       </>
     );
   }

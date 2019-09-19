@@ -4,14 +4,20 @@ import {
   BrowserRouter,
   Redirect,
   Route,
+  Switch,
 } from "react-router-dom";
 import './index.css';
 import Main from './js/Main';
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route exact path='/' component={Main}/>
-    <Redirect to='/'/>
+    <Switch>
+      <Route exact path='/' component={Main}/>
+      <Redirect to='/'/>
+    </Switch>
   </BrowserRouter>,
   document.getElementById('root')
 );
+
+serviceWorker.register();

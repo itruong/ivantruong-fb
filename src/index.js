@@ -7,13 +7,13 @@ import {
   Switch,
 } from "react-router-dom";
 import './index.css';
-import Main from './js/Main';
+import App from './components/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route exact path='/' component={Main}/>
+      <Route exact path='/' component={App}/>
       <Redirect to='/'/>
     </Switch>
   </BrowserRouter>,
